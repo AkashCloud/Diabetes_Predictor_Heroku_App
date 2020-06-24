@@ -29,11 +29,11 @@ X_train, X_test, y_train, y_test = train_test_split(feature.values, target.value
 model = XGBClassifier()
 model.fit(X_train,y_train)
 
-y_pred = model.predict(X_test)
+#y_pred = model.predict(X_test)
 
-accuracy = accuracy_score(y_test, y_pred)
-print("Accuracy: %.2f%%" % (accuracy * 100.0))
+#accuracy = accuracy_score(y_test, y_pred)
+#print("Accuracy: %.2f%%" % (accuracy * 100.0))
 
-# filename = 'prediction.pkl'
-# pickle.dump(model, open(filename, 'wb'))
+filename = 'prediction.pkl'
+pickle.dump(model, open(filename, 'wb'))
 # print(feature.columns)
